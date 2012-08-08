@@ -1,14 +1,14 @@
 #!/usr/bin/python
+from math import *
 
-dynmons=dict()
-
-def cntincr(n,change):
-    if n in dynmons:
-        return dynmons[n]
-    for i in change:
-        
-
-
-change=[200,100,50,20,10,5,2,1]
+coins=[1,2,5,10,20,50,100,200]
 
 val=200
+def getcnt(n,i):
+    if n==0: return 1
+    if n<0: return 0
+    return sum([getcnt(n-coin,j+1) for (j,coin) in enumerate(coins[:i])])
+
+print getcnt(val,len(coins))
+   
+
