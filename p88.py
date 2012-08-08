@@ -5,21 +5,13 @@ from operator import mul
 import itertools
 import sys
 import pylab as pl
+#mine
+from helper import factorize
 
 def checkprodsum(a,N):
     if sum(a)==N:
         return True
     return False
-
-def factorize(N):
-    facs=list()
-    a=2
-    while N!=1:
-        while N%a==0:
-            facs.append(a)
-            N/=a
-        a+=1
-    return facs
 
 def subsetter(k,basis):
     if basis==[2,2]:
@@ -58,7 +50,7 @@ def check_Ns(Ns):
     if Ns!=True_Ns_2_400:
         print "You suck."
 
-
+"""
 kndiff=list()
 solutions=list()
 for k in range(2,400):
@@ -96,3 +88,4 @@ check_Ns(Ns)
 #pl.plot(kndiff)
 #pl.plot(sorted(list(set(solutions))))
 #pl.show()
+"""
