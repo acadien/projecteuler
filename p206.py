@@ -2,22 +2,24 @@
 from math import *
 import re
 
-low=int(sqrt(1020304050607080900))
-#high=int(sqrt(192939495969798999))
+low =int(sqrt(1020304050607080900))
+high=int(sqrt(1929394959697989909))
 
-low +=   200000000
-high=low+100000000
+def compare(val):
+    val=str(val)
+    if val[::2]=="1234567890":
+        return True
+    return False
 
-tomatch="1.2.3.4.5.6.7.8.9.0"
-prog = re.compile(tomatch)
+print 
 
-print low**2,len(str(low**2)),len("1.2.3.4.5.6.7.8.9.0")
-
-for i in range(low,high):
-    a=str(i**2)
-    if a[2]=="2":# and a[4]=="3":
-        if prog.match(a):
-            print i,i**2
-            break
-
-print a
+prev=low
+step=1000000
+while True:
+    for i in range(prev,prev+step):
+        if i%1000==0:
+            print high-i
+        if compare(i*i):
+            print i
+            exit(0)
+    prev+=step
