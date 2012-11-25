@@ -3,7 +3,7 @@ import sys
 from math import *
 from repr import repr
 
-def pangeafib():
+def pangeafib(start):
     digs=map(str,range(1,10))
     n1=0
     n2=1
@@ -18,9 +18,11 @@ def pangeafib():
         if k%1000==0:
             print k#,len(sfib)
 
-        ndig=int(log10(f))
-        frstdig=sorted(str(f/10**(ndig-8)))
-        lastdig=sorted(str(f%int(1E9)))
+        if k>start:
+
+            ndig=int(log10(f))
+            frstdig=sorted(str(f/10**(ndig-8)))
+            lastdig=sorted(str(f%int(1E9)))
 
         #Test
         #if frstdig==digs:
@@ -29,12 +31,12 @@ def pangeafib():
         #    print "last",k,frstdig,lastdig#,len(sfib)
 
         #Final solution.
-        if frstdig==digs and lastdig==digs:
-            print "win",k,frstdig,lastdig#,len(sfib)
-            break
+            if frstdig==digs and lastdig==digs:
+                print "win",k,frstdig,lastdig#,len(sfib)
+                break
 
         if k>1000000: 
             break
 
-pangeafib()
+pangeafib(250000)
 
