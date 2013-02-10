@@ -86,4 +86,4 @@ for digs in all_combo_digs:
 
 print cr_results
 print consec_run
-print cr_digs
+print "".join(map(lambda x:str(int(x)),cr_digs))
