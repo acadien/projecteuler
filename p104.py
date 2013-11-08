@@ -20,23 +20,25 @@ def pangeafib(start):
 
         if k>start:
 
+            lastdig=set(str(f%1000000000))
+            if len(lastdig)!=9 or "0" in lastdig:
+                continue
             ndig=int(log10(f))
-            frstdig=sorted(str(f/10**(ndig-8)))
-            lastdig=sorted(str(f%int(1E9)))
+            frstdig=set(str(f/10**(ndig-8)))
 
-        #Test
-        #if frstdig==digs:
-        #    print "first",k,frstdig,lastdig#,len(sfib)
-        #if lastdig==digs:
-        #    print "last",k,frstdig,lastdig#,len(sfib)
+            #Test
+            #if len(frstdig)==9:
+            #    print "first",k,frstdig,lastdig#,len(sfib)
+            #if len(lastdig)==9:
+            #    print "last",k,frstdig,lastdig#,len(sfib)
 
-        #Final solution.
-            if frstdig==digs and lastdig==digs:
+            #Final solution.
+            if len(frstdig)==9 and "0" not in frstdig:
                 print "win",k,frstdig,lastdig#,len(sfib)
                 break
 
         if k>1000000: 
             break
 
-pangeafib(250000)
+pangeafib(0)
 

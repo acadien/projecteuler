@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from math import *
-from primes import primesfrom2to,isprime
+#mine
+from PEutil import *
 
 RANGE_MIN=0
 RANGE_MAX=1000

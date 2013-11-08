@@ -1,6 +1,17 @@
 #!/usr/bin/python
-import numpy
-from math import sqrt
+from math import *
+
+#Returns true if number/list is palindrome
+def palindrome(x):
+    pal=str(x)
+    for i in range(len(pal)/2+1):
+        if pal[i]!=pal[-(i+1)]:
+            return False
+    return True
+
+#Returns the product
+def product(nums):
+    return reduce(operator.mul,nums,1)
 
 #This code came from the following URL
 # http://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n-in-python/3035188#3035188
@@ -15,6 +26,7 @@ def primesfrom2to(n):
             sieve[k*(k-2*(i&1)+4)/3::2*k] = False
     return numpy.r_[2,3,((3*numpy.nonzero(sieve)[0][1:]+1)|1)]
 
+#Returns true if prime
 def isprime(n):
   if n == 2 or n == 3: return True
   if n < 2 or n%2 == 0: return False

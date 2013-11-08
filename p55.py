@@ -1,12 +1,7 @@
 #!/usr/bin/python
 from math import *
-
-def check_paldrm(x):
-    pal=str(x)
-    for i in range(len(pal)/2+1):
-        if pal[i]!=pal[-(i+1)]:
-            return False
-    return True
+#mine
+from PEutil import *
 
 def lych(n):
     l=int(str(n)[::-1])
@@ -19,7 +14,7 @@ for i in range(int(1E4)):
     fnd=0
     for j in range(MAXITER):
         n=lych(n)
-        if check_paldrm(n):
+        if palindrome(n):
             print n,j
             fnd=1
             break

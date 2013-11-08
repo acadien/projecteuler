@@ -1,7 +1,6 @@
 #!/usr/bin/python
 from math import *
-from primes import primesfrom2to
-
+from PEutil import *
 
 def cg(n,prms):
     for i in prms:

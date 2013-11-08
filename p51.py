@@ -1,7 +1,8 @@
 #!/usr/bin/python
 from math import *
-import primes
 from itertools import product
+#mine
+from PEutil import *
 N=10**6
 NN=len(str(N))-1
 prms=[str(i) for i in primes.primesfrom2to(N) if i>N/10]

@@ -1,7 +1,8 @@
 #!/usr/bin/python
 from math import *
-from primes import *
 import numpy
+#mine
+from PEutil import *
 
 primes=primesfrom2to(1E5)
 

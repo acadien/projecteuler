@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from math import *
-from primes import *
+#mine
+from PEutil import *
 
 mxnum=50e6
 mxroot=sqrt(mxnum)

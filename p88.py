@@ -8,6 +8,22 @@ import pylab as pl
 #mine
 from helper import factorize
 
+def factorize(N,primes):
+    if N<2:
+        return []
+    if N in primes:
+        return [N]
+    facs=list()
+    a=primes[0]
+    q=0
+    while N!=1:
+        while N%a==0:
+            facs.append(a)
+            N/=a
+        q+=1
+        a=primes[q]
+    return facs
+
 def checkprodsum(a,N):
     if sum(a)==N:
         return True

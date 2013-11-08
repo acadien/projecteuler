@@ -1,7 +1,8 @@
 #!/usr/bin/python
 from math import *
-from primes import primesfrom2to
 from itertools import permutations
+#mine
+from PEutil import *
 
 primes=[i for i in primesfrom2to(10000) if i>999]
 

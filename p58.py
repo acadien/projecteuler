@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from math import *
-from primes import isprime
+#mine
+from PEutil import *
 
 layer=0
 num=1

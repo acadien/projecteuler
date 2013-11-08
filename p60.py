@@ -1,8 +1,8 @@
 #!/usr/bin/python
 from math import *
-from primes import primesfrom2to,isprime
 from itertools import permutations
-
+#mine
+from PEutil import *
 n=1E4
 primes=primesfrom2to(n).tolist()
 primes.remove(2)

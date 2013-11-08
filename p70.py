@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
 from math import *
-from primes import *
+#mine
+from PEutil import *
 
 #phi(87109) = 79180
 
