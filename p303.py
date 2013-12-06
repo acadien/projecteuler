@@ -15,6 +15,7 @@ for n in range(1,maxN+1):
   if n==9999:
     total+=1111333355557778
     continue
+  
   mul=1
   while max(str(n*mul))>'2':
     mul+=1
